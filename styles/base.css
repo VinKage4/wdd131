@@ -3,6 +3,7 @@
     --secondary-color: #23395d;
     --accent-color: #000;
     --secaccent-color: #f4f4f4;
+    --highlight-color: #cddc39;
   }
   
   body {
@@ -10,59 +11,70 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto; /* Header / Main / Footer and Left / Center / Right */
+    min-height: 100vh;
     background-color: var(--primary-color);
     color: #333;
   }
   
   header {
-    display: grid;
-    text-align: center;
+    grid-column: 1 / 4;
     background-color: var(--secondary-color);
     color: white;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    font-weight: 700;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .highlight {
+    color: var(--highlight-color);
   }
   
   nav ul {
     display: flex;
     justify-content: center;
+    list-style: none;
+    padding: 0.5rem 0;
+    background-color: #333;
+    margin: 0;
     gap: 2rem;
     padding: 1rem;
     background-color: var(--accent-color);
     margin: 0;
   }
   
-  nav ul li {
-    list-style: none;
-  }
-  
-  nav ul li a {
+  nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
   }
   
-  nav ul li a:hover {
+  nav a:hover {
     text-decoration: underline;
   }
   
-  section {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
+  main {
+    display: contents; /* Let child sections fall into grid columns */
   }
   
   .card {
     background-color: var(--secaccent-color);
     padding: 1rem;
     border-radius: 10px;
+    margin: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .card h2 {
+  .about {
+    grid-column: 1 / 3;
+  }
+  
+  .resources {
+    grid-column: 3 / 4;
+  }
+  
+  .about h2,
+  .resources h2 {
     background-color: var(--secondary-color);
     color: white;
     padding: 0.5rem;
@@ -70,29 +82,37 @@
     margin-bottom: 1rem;
   }
   
-  .about-me {
+  .about-content {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
     margin-bottom: 1rem;
   }
   
-  .about-me img {
-    max-width: 150px;
-    border-radius: 5px;
+  .about-content img {
+    width: 150px;
     border: 1px solid steelblue;
     padding: 2px;
     box-shadow: 0 0 30px gray;
+    border-radius: 5px;
   }
+
+  img {
+    width: 150px;
+    height: auto;
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px gray; 
+}
   
-  .flag-section {
+  .flag-info {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     margin-top: 1rem;
   }
   
-  .flag-section img {
+  .flag-info img {
     width: 100px;
     height: auto;
   }
@@ -101,6 +121,11 @@
     font-size: 0.8rem;
     font-style: italic;
     margin-top: 0.5rem;
+  }
+  
+  .resources ul {
+    list-style: none;
+    padding-left: 1rem;
   }
   
   .resources a {
@@ -113,14 +138,15 @@
   }
   
   footer {
+    grid-column: 1 / 4;
     background-color: var(--secondary-color);
     color: white;
     text-align: center;
     padding: 1rem;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   
   footer .timestamp {
-    color: #cddc39;
+    color: var(--highlight-color);
   }
   
