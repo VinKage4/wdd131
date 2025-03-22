@@ -1,0 +1,33 @@
+:root {
+    primary-color: #ffffff;
+    secondary-color: #23395d;
+    accent-color: #000;
+    secaccent-color: #f4f4f4;
+}
+
+header { 
+    display: grid;
+    text-align: center;
+    secondary-color:#23395d;
+    margin: var(--margin);
+    border: var(--border);
+    padding: var(--padding);
+    font-weight: 700;
+}
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+nav {
+    display: block;
+    unicode-bidi: isolate;
+}
