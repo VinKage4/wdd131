@@ -84,10 +84,9 @@
   }
   
   .about-content {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
     gap: 1rem;
-    margin-bottom: 1rem;
+    align-items: center;
   }
   
   .about-content img {
