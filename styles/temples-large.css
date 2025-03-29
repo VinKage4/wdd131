@@ -1,0 +1,32 @@
+@media screen and (min-width: 880px) {
+    /* Make sure the heading is shown in large view */
+    h1.handler {
+      display: block;
+      width: 100%;
+    }
+  
+    /* Hide hamburger button on large screens */
+    #hambutton {
+      display: none;
+    }
+  
+    nav {
+      flex-direction: row;
+      justify-content: flex-end;
+      background-color: var(--secondary-color); /* Keep it consistent with header/nav */
+      color: var(--primary-color);
+    }
+  
+    nav a {
+      display: block;
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  
+    nav a:hover,
+    nav a:focus {
+      color: var(--highlight-color);
+      font-weight: bold;
+    }
+  }
+  
