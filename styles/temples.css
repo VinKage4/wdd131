@@ -34,8 +34,8 @@
   }
   
   nav ul {
-    list-style: none;
     display: flex;
+    list-style-type: none;
     gap: 1rem;
     margin-right: 1rem;
   }
@@ -109,4 +109,35 @@
     padding: 1rem;
     margin-top: 2rem;
   }
+
+  #hambutton {
+    display: block;
+    font-size: 2rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    padding: 0 1rem;
+  }
+  
+  #hambutton::before {
+    content: "≡"; /* hamburger icon */
+  }
+  
+  #hambutton.open::before {
+    content: "X"; /* close icon */
+  }
+  
+  #navmenu ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    width: 100%;
+  }
+  
+  #navmenu.open ul {
+    display: flex;
+    text-align: center;
+  }
+  
   

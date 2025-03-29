@@ -10,23 +10,15 @@
       display: none;
     }
   
-    nav {
+    #navmenu ul {
+      display: flex !important;
       flex-direction: row;
       justify-content: flex-end;
-      background-color: var(--secondary-color); /* Keep it consistent with header/nav */
-      color: var(--primary-color);
+      background-color: var(--secondary-color);
     }
   
-    nav a {
-      display: block;
-      font-size: 1.5rem;
-      padding: 1rem;
-    }
-  
-    nav a:hover,
-    nav a:focus {
-      color: var(--highlight-color);
-      font-weight: bold;
+    #navmenu.open ul {
+      display: flex;
     }
   }
   
