@@ -6,3 +6,5 @@ yearSpan.textContent = currentYear;
 // Get last modified date
 const lastMod = document.lastModified;
 document.getElementById("lastmodified").textContent = `Last Modification: ${lastMod}`;
+
+// menu toggle hamburger
