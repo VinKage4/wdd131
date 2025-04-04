@@ -9,13 +9,7 @@
     .hero picture {
       grid-column: 1 / 4;
     }
-    body {
-        background-color: var(--background-color);
-        font-family: 'Roboto', 'Roboto Condensed';
-        margin: 0;
-        padding: 0;
-        color: var(--primary-color);
-      }
+
     .info-section {
       grid-column: 1 / 2;
     }
