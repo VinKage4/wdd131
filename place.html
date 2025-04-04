@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil</title>
+    <meta name="description" content="Learn about Brazil, including its area, population, capital, languages, and weather conditions.">
+    <meta name="author" content="Vinicius Sousa">
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <!-- External JavaScript File -->
+    <script src="scripts/place.js" defer></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header>
+            <h1>Brazil</h1>
+        </header>
+        <main>
+            <section class="hero">
+                <picture>
+                    <source srcset="images/saopaulo.webp" media="(min-width: 800px)">
+                    <img src="images/masp.webp" alt="Background image of the place">
+                </picture>
+                <section class="info-section">
+                    <div class="info-box">
+                        <h2>Data</h2>
+                        <p><strong>Area:</strong> <span>8,515,767 km²</span></p>
+                        <p><strong>Population:</strong> <span>218.8 million</span></p>
+                        <p><strong>Languages:</strong> <span>Portuguese</span></p>
+                        <p><strong>Currency:</strong> <span>Brazilian Real</span></p>
+                        <p><strong>Time Zone:</strong> <span>BRT (UTC -3)</span></p>
+                        <p><strong>Calling Code:</strong> <span>+55</span></p>
+                        <p><strong>Internet TLD:</strong> <span>.br</span></p>
+                    </div>
+                </section>
+                <section class="weather-section">
+                    <div class="weather-box">
+                        <h2>Weather <span class="sun-emoji">☀️</span></h2>
+                        <img src="images/sunny-icon.svg" alt="Weather icon" class="weather-icon">            
+                        <p><strong>Temperature:</strong> <span>28ºC</span></p>
+                        <p><strong>Conditions:</strong> <span>Sunny</span></p>
+                        <p><strong>Wind:</strong> <span>12km/h</span></p>
+                        <p><strong>Wind Chill: </strong> <span id="wind-chill"></span></p>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <p>©
+                <span id="currentyear">2025</span>
+                Vinicius Sousa - Sao Paulo, Brazil
+            </p>
+            <p id="lastmodified">Last modified: 03/21/2025 7:03</p>
+        </footer>
+    </body>
+</html>
