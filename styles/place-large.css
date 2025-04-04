@@ -1,0 +1,36 @@
+@media (min-width: 800px) {
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 1rem;
+      align-items: center;
+    }
+  
+    .hero picture {
+      grid-column: 1 / 4;
+    }
+  
+    .info-section {
+      grid-column: 1 / 2;
+    }
+  
+    .weather-section {
+      grid-column: 3 / 4;
+    }
+  
+    .info-box,
+    .weather-box {
+      margin-top: -5rem;
+    }
+  
+    .info-box h2,
+    .weather-box h2 {
+      font-size: 1.4rem;
+    }
+  
+    footer {
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+  }
+  

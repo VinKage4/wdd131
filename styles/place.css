@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #009739;      /* Brazilian Green */
+    --secondary-color: #FFCC29;    /* Brazilian Yellow */
+    --background-color: #fffde7;   /* Soft yellow background */
+  }
+  
+  body {
+    background-color: var(--background-color);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+  }
+  
+  header {
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    color: #000;
+    font-size: 2.5rem;
+  }
+  
+  h1 {
+    margin: 0;
+    position: relative;
+    font-size: 3rem;
+  }
+  
+  h1::after {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 8px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0 auto;
+  }
+  
+  .hero {
+    position: relative;
+    width: 100vw;
+    height: auto;
+  }
+  
+  .hero picture img {
+    width: 100vw;
+    height: auto;
+    display: block;
+  }
+  
+  .info-section, .weather-section {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .info-box, .weather-box {
+    background-color: rgba(255, 204, 41, 0.9); /* yellow with transparency */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    width: 250px;
+    color: #000;
+  }
+  
+  .info-box h2, .weather-box h2 {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px;
+    margin: -15px -15px 10px -15px;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.2rem;
+  }
+  
+  span {
+    font-size: large;
+    font-weight: 500;
+  }
+  
+  .weather-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 10px auto;
+  }
+  
+  /* RESPONSIVE LAYOUT */
+  
+  @media (min-width: 800px) {
+    .info-section, .weather-section {
+      position: absolute;
+    }
+  
+    .info-section {
+      top: 20px;
+      left: 20px;
+    }
+  
+    .weather-section {
+      bottom: 20px;
+      right: 20px;
+    }
+  
+    .weather-box img.weather-icon {
+      display: none;
+    }
+  
+  }
+  
+  @media (max-width: 799px) {
+    .hero {
+      text-align: center;
+    }
+  
+    .hero picture img {
+      width: 80%;
+      height: auto;
+    }
+  
+    .info-box, .weather-box {
+      width: 85%;
+      margin: 20px auto;
+    }
+  
+  
+    .weather-box img.weather-icon {
+      display: block;
+      margin: 10px auto;
+    }
+  }
+  
+  footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 15px 0;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    position: relative;
+  }
+  
+  footer::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 6px;
+    background-color: var(--secondary-color);
+    margin: 10px auto 0 auto;
+  }
+  
