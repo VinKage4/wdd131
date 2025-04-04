@@ -4,6 +4,7 @@
     --background-color: #fffde7;   /* Soft yellow background */
   }
   
+  html,
   body {
     background-color: var(--background-color);
     font-family:'Roboto', 'Roboto Condensed', sans-serif;
