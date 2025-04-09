@@ -1,0 +1,24 @@
+@media screen and (min-width: 880px) {
+    /* Make sure the heading is shown in large view */
+    h1.handler {
+      display: block;
+      width: 100%;
+    }
+  
+    /* Hide hamburger button on large screens */
+    #hambutton {
+      display: none;
+    }
+  
+    #navmenu ul {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: flex-end;
+      background-color: var(--secondary-color);
+    }
+  
+    #navmenu.open ul {
+      display: flex;
+    }
+  }
+  
