@@ -1,7 +1,4 @@
-/* Import Google Fonts FIRST */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
-
-  /* CSS Variables for colors */
+/* CSS Variables for colors */
 
 :root {
     --primary-color: #ffffff;
