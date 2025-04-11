@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
 @media screen and (min-width: 880px) {
     /* Make sure the heading is shown in large view */
     h1.handler {
