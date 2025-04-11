@@ -16,7 +16,7 @@
   html,
   body {
     height: 100%;
-    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     background-color: var(--secaccent-color);
     color: var(--accent-color);
   }
