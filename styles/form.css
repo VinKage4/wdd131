@@ -1,139 +1,145 @@
 :root {
-    --primary-color: #2e003e;         /* Deep purple (header and button background) */
-    --secondary-color: #e6dee9;       /* Light purple/gray form background */
-    --text-color: #333;               /* Default text */
-    --input-border-color: #ccc;
-    --button-hover-color: #440060;
-    --optional-text-color: #666;
-    --footer-bg-color: #2e003e;
-    --footer-text-color: white;
-  }
-  
-  /* General Reset and Font */
-  body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f3f3f3;
-    color: var(--text-color);
-  }
-  
-  /* Header */
-  header {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  /* Form Container */
-  main {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-  }
-  
-  form {
-    background-color: var(--secondary-color);
-    padding: 2rem;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  /* Form Elements */
-  label {
-    display: block;
-    margin-top: 1rem;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="date"],
-  select,
-  textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.25rem;
-    border: 1px solid var(--input-border-color);
-    border-radius: 4px;
-    font-size: 1rem;
-    background-color: white;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  /* Optional Text */
-  label span.optional {
-    font-weight: normal;
-    font-size: 0.85rem;
-    color: var(--optional-text-color);
-    margin-left: 0.3rem;
-  }
-  
-  /* Radio Buttons (Star Rating) */
-  fieldset {
-    border: none;
-    margin-top: 1rem;
-    padding: 0;
-  }
-  
-  legend {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  
-  fieldset label {
-    display: inline-block;
-    margin-right: 0.5rem;
-  }
-  
-  input[type="radio"] {
-    margin-right: 0.25rem;
-  }
-  
-  /* Features (Checkboxes) */
-  form .checkbox-group label {
-    display: block;
-    font-weight: normal;
-    margin-top: 0.25rem;
-  }
-  
-  /* Submit Button */
-  button[type="submit"] {
-    width: 100%;
-    margin-top: 2rem;
-    padding: 0.75rem;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: var(--button-hover-color);
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    font-size: 0.85rem;
-    padding: 1rem;
-    background-color: var(--footer-bg-color);
-    color: var(--footer-text-color);
-    margin-top: 2rem;
-  }
-  
-  footer span {
-    display: block;
-  }
-  
-  footer .location {
-    font-style: italic;
-    margin-bottom: 0.25rem;
-  }
-  
+  --primary-color: #1f1b2e;         /* Darker purple for better contrast */
+  --secondary-color: #f5f3f7;       /* Light but readable background */
+  --text-color: #111827;            /* Dark, accessible text */
+  --input-border-color: #ccc;
+  --button-color: #5b21b6;          /* Violet button */
+  --button-hover-color: #4c1d95;
+  --optional-text-color: #555;
+  --footer-bg-color: #1f1b2e;
+  --footer-text-color: #ffffff;
+}
+
+/* General Reset and Font */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f3f4f6;
+  color: var(--text-color);
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Form Container */
+main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+form {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Form Elements */
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: var(--text-color);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Optional Text */
+label span.optional {
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: var(--optional-text-color);
+  margin-left: 0.3rem;
+}
+
+/* Radio Buttons (Star Rating) */
+fieldset {
+  border: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+fieldset label {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+input[type="radio"] {
+  margin-right: 0.25rem;
+}
+
+/* Features (Checkboxes) */
+form .checkbox-group label {
+  display: block;
+  font-weight: normal;
+  margin-top: 0.25rem;
+  color: var(--text-color);
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.75rem;
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 1rem;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  margin-top: 2rem;
+}
+
+footer span {
+  display: block;
+}
+
+footer .location {
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
