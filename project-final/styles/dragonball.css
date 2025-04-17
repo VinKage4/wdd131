@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #FFCC00;       /* Super Saiyan Yellow */
+    --secondary-color: #1C1C1C;     /* Deep Black */
+    --accent-color: #E60012;        /* Goku's Outfit Red */
+    --background-color: #f8f9fc;    /* Light Gray Background */
+    --text-color: #222;
+    --card-bg: #ffffff;
+    --card-border: #e0e0e0;
+    --font-main: 'Roboto', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 1rem;
+  }
+  
+  /* Header Layout */
+  .site-header {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .logo {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .main-nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .main-nav a {
+    background-color: var(--card-border);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .main-nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: var(--card-bg);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Power-up mode toggle (JS interaction) */
+  .hero.power-up {
+    background-color: var(--accent-color);
+    color: white;
+  }
+  
+  /* Feature Section */
+  .features {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--secondary-color);
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .feature-box {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* JS toggle effect */
+  .feature-box.active {
+    background-color: var(--accent-color);
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* Main Section */
+  .main-section {
+    background-color: var(--card-bg);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .main-section img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--card-border);
+  }
+
+  
+  section {
+    display: none; /* hidden by default */
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--card-border);
+    font-size: 0.9rem;
+  }
+  
