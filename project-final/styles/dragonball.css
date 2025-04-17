@@ -281,3 +281,44 @@ img {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
   
+  .features a.feature-box {
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hide nav on small screens by default */
+.main-nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .main-nav.open {
+    display: flex;
+  }
+  
+  /* Show nav normally on large screens */
+  @media (min-width: 768px) {
+    .main-nav {
+      display: flex !important;
+      flex-direction: row;
+      background-color: transparent;
+      padding: 0;
+    }
+  
+    #hambutton {
+      display: none;
+    }
+  }
+  
+  #hambutton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  

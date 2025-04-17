@@ -9,11 +9,20 @@ document.querySelectorAll("img").forEach(img => img.loading = "lazy");
 
 // Toggle feature box state
 document.querySelectorAll(".feature-box").forEach(box => {
-  box.addEventListener("click", () => {
-    alert(`You clicked on: ${box.textContent}`);
-    box.classList.toggle("active");
-  });
+    box.addEventListener("click", () => {
+      box.classList.toggle("active");
+      // No alert, cleaner UX
+    });
+  });  
+
+// Toggle mobile nav menu
+const hambutton = document.getElementById("hambutton");
+const nav = document.querySelector(".main-nav");
+
+hambutton.addEventListener("click", () => {
+  nav.classList.toggle("open");
 });
+
 
 // Hero power toggle
 const hero = document.querySelector(".hero");
@@ -27,7 +36,7 @@ hero.addEventListener("dblclick", () => {
 
 // Simulated page navigation using section toggle
 const pages = ["home", "timeline", "characters", "gallery"];
-const links = document.querySelectorAll(".main-nav a");
+const links = document.querySelectorAll(".main-nav a, .feature-box");
 
 function showPage(id) {
   pages.forEach(page => {
@@ -143,8 +152,17 @@ document.querySelectorAll("img").forEach(img => {
     timelineImg.src = item.src;
     timelineImg.alt = item.title;
     timelineTitle.textContent = item.title;
-    timelineDesc.textContent = current.description;
+    
+    let timelineDesc = document.getElementById("timelineDesc");
+    if (!timelineDesc) {
+      timelineDesc = document.createElement("p");
+      timelineDesc.id = "timelineDesc";
+      timelineImg.after(timelineDesc);
+    }
+    
+    timelineDesc.textContent = item.description;
   }
+  
   
   timelinePrevBtn.addEventListener("click", () => {
     timelineIndex = (timelineIndex - 1 + timelineImages.length) % timelineImages.length;
