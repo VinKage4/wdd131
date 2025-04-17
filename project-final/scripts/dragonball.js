@@ -53,7 +53,7 @@ links.forEach(link => {
 const charactersSection = document.getElementById("characters");
 
 const characterImages = [
-  { name: "Goku", src: "images/goku.webp" },
+  { name: "Goku", src: "images/goku-c.webp" },
   { name: "Vegeta", src: "images/vegeta.webp" },
   { name: "Gohan", src: "images/gohan.webp" },
   { name: "Bulma", src: "images/bulma.webp" },
