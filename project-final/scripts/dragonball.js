@@ -26,7 +26,7 @@ hero.addEventListener("dblclick", () => {
 });
 
 // Simulated page navigation using section toggle
-const pages = ["intro", "timeline", "characters", "gallery"];
+const pages = ["home", "timeline", "characters", "gallery"];
 const links = document.querySelectorAll(".main-nav a");
 
 function showPage(id) {
@@ -39,7 +39,7 @@ function showPage(id) {
 }
 
 // Set initial visible page
-showPage("intro");
+showPage("home");
 
 links.forEach(link => {
   link.addEventListener("click", e => {
@@ -117,7 +117,7 @@ const characters = [
   
 // Make all images the same size
 
-
+updateTimeline();
 document.querySelectorAll("img").forEach(img => {
     img.style.width = "100%";
     img.style.maxWidth = "500px";
