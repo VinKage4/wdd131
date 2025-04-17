@@ -26,7 +26,7 @@
     flex-direction: column;
     min-height: 100vh;
   }
-  
+
   /* Header Layout */
   .site-header {
     background-color: var(--secondary-color);
@@ -231,14 +231,53 @@
   section {
     display: none; /* hidden by default */
   }
+   
+  /* Apply flex layout to html and body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
   
-  /* Footer */
+  /* Let main grow and push footer down */
+  main {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  /* Footer at bottom */
   footer {
-    background-color: var(--secondary-color); /* match header */
-    color: white;                             /* same as header text */
+    background-color: var(--secondary-color); /* Match header */
+    color: white;
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
     border-top: 1px solid var(--card-border);
-  }  
+  }
+  
+  /* Universal image styling for consistent size and look */
+img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 1rem auto;
+  }
+  
+  /* Override individual image containers for consistency */
+  #timeline-carousel img,
+  .carousel img,
+  .main-section img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
   

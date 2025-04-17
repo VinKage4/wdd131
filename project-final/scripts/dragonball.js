@@ -115,6 +115,22 @@ const characters = [
       }
     ];
   
+// Make all images the same size
+
+
+document.querySelectorAll("img").forEach(img => {
+    img.style.width = "100%";
+    img.style.maxWidth = "500px";
+    img.style.height = "auto";
+    img.style.borderRadius = "8px";
+    img.style.border = "1px solid var(--card-border)";
+    img.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.2)";
+    img.style.display = "block";
+    img.style.margin = "1rem auto";
+  });
+ 
+
+
   let timelineIndex = 0;
   
   const timelineImg = document.getElementById("timelineImage");
