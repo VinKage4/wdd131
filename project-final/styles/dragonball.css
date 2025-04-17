@@ -20,7 +20,11 @@
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
-    padding: 1rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
   /* Header Layout */
@@ -110,6 +114,93 @@
     color: white;
     transform: scale(1.05);
   }
+
+  #timeline-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  #timeline-carousel img {
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #timeline-carousel h3 {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  #timelinePrevBtn,
+  #timelineNextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #timelinePrevBtn {
+    left: 0;
+  }
+  
+  #timelineNextBtn {
+    right: 0;
+  }
+  
+  
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .carousel img {
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #prevBtn {
+    left: 0;
+  }
+  
+  #nextBtn {
+    right: 0;
+  }
+  
+  #characterName {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-top: 1rem;
+  }
   
   /* Main Section */
   .main-section {
@@ -131,6 +222,11 @@
     border: 1px solid var(--card-border);
   }
 
+  main {
+    flex: 1;
+    padding: 1rem;
+  }
+  
   
   section {
     display: none; /* hidden by default */
@@ -138,12 +234,11 @@
   
   /* Footer */
   footer {
-    background-color: var(--card-bg);
-    color: var(--text-color);
+    background-color: var(--secondary-color); /* match header */
+    color: white;                             /* same as header text */
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
-    border-top: 1px solid var(--card-border);
     font-size: 0.9rem;
-  }
+    border-top: 1px solid var(--card-border);
+  }  
   

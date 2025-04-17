@@ -49,86 +49,98 @@ links.forEach(link => {
   });
 });
 
-// Add character images dynamically
-const charactersSection = document.getElementById("characters");
-
-const characterImages = [
-  { name: "Goku", src: "images/goku-c.webp" },
-  { name: "Vegeta", src: "images/vegeta.webp" },
-  { name: "Gohan", src: "images/gohan.webp" },
-  { name: "Bulma", src: "images/bulma.webp" },
-  { name: "Piccolo", src: "images/piccolo.webp" },
-  { name: "Frieza", src: "images/frieza.webp" }
-];
-
-const charImgContainer = document.createElement("div");
-charImgContainer.style.display = "flex";
-charImgContainer.style.flexWrap = "wrap";
-charImgContainer.style.justifyContent = "center";
-charImgContainer.style.gap = "1rem";
-charImgContainer.style.marginTop = "1.5rem";
-
-characterImages.forEach(character => {
-  const figure = document.createElement("figure");
-  figure.style.textAlign = "center";
-
-  const img = document.createElement("img");
-  img.src = character.src;
-  img.alt = character.name;
-  img.width = 200;
-  img.loading = "lazy";
-  img.style.borderRadius = "8px";
-  img.style.border = "1px solid var(--card-border)";
-
-  const caption = document.createElement("figcaption");
-  caption.textContent = character.name;
-  caption.style.marginTop = "0.5rem";
-
-  figure.appendChild(img);
-  figure.appendChild(caption);
-  charImgContainer.appendChild(figure);
-});
-
-charactersSection.appendChild(charImgContainer);
-
-// Add images to Dragon Ball Timeline section
-const timelineImages = [
-    { title: "Dragon Ball", src: "images/timeline-dragonball.webp" },
-    { title: "Dragon Ball Z", src: "images/timeline-z.webp" },
-    { title: "Dragon Ball GT", src: "images/timeline-gt.webp" },
-    { title: "Dragon Ball Super", src: "images/timeline-super.webp" }
+// Character carousel
+const characters = [
+    { name: "Goku", src: "images/goku.webp" },
+    { name: "Vegeta", src: "images/vegeta.webp" },
+    { name: "Gohan", src: "images/gohan.webp" },
+    { name: "Bulma", src: "images/bulma.webp" },
+    { name: "Piccolo", src: "images/piccolo.webp" },
+    { name: "Frieza", src: "images/frieza.webp" }
   ];
   
-  const timelineSection = document.getElementById("timeline");
+  let currentIndex = 0;
   
-  const timelineGallery = document.createElement("div");
-  timelineGallery.style.display = "flex";
-  timelineGallery.style.flexWrap = "wrap";
-  timelineGallery.style.justifyContent = "center";
-  timelineGallery.style.gap = "1rem";
-  timelineGallery.style.marginTop = "1.5rem";
+  const imageElement = document.getElementById("characterImage");
+  const nameElement = document.getElementById("characterName");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
   
-  timelineImages.forEach(({ title, src }) => {
-    const figure = document.createElement("figure");
-    figure.style.textAlign = "center";
-    figure.style.maxWidth = "240px";
+  function updateCharacter() {
+    const char = characters[currentIndex];
+    imageElement.src = char.src;
+    imageElement.alt = char.name;
+    nameElement.textContent = char.name;
+  }
   
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = title;
-    img.width = 220;
-    img.loading = "lazy";
-    img.style.borderRadius = "8px";
-    img.style.border = "1px solid var(--card-border)";
-  
-    const caption = document.createElement("figcaption");
-    caption.textContent = title;
-    caption.style.marginTop = "0.5rem";
-  
-    figure.appendChild(img);
-    figure.appendChild(caption);
-    timelineGallery.appendChild(figure);
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + characters.length) % characters.length;
+    updateCharacter();
   });
   
-  timelineSection.appendChild(timelineGallery);
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % characters.length;
+    updateCharacter();
+  });
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    updateCharacter();
+  
+    // Footer data
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastmodified").textContent = `Last modified: ${document.lastModified}`;
+  });
+  
+// Timeline images
+  const timelineImages = [
+    {
+        title: "Dragon Ball",
+        src: "images/timeline-dragonball.webp",
+        description: "The beginning of Goku's journey as a child discovering martial arts, friendship, and the Dragon Balls."
+      },
+      {
+        title: "Dragon Ball Z",
+        src: "images/timeline-z.webp",
+        description: "Goku faces powerful foes like the Saiyans, Frieza, Cell, and Majin Buu, discovering Super Saiyan forms."
+      },
+      {
+        title: "Dragon Ball GT",
+        src: "images/timeline-gt.webp",
+        description: "A side sequel exploring Goku turned into a kid again and introducing Super Saiyan 4 and Baby."
+      },
+      {
+        title: "Dragon Ball Super",
+        src: "images/timeline-super.webp",
+        description: "The multiverse saga begins with gods, Ultra Instinct, and battles against Jiren, Zamasu, and more."
+      }
+    ];
+  
+  let timelineIndex = 0;
+  
+  const timelineImg = document.getElementById("timelineImage");
+  const timelineTitle = document.getElementById("timelineTitle");
+  const timelinePrevBtn = document.getElementById("timelinePrevBtn");
+  const timelineNextBtn = document.getElementById("timelineNextBtn");
+  
+  function updateTimeline() {
+    const item = timelineImages[timelineIndex];
+    timelineImg.src = item.src;
+    timelineImg.alt = item.title;
+    timelineTitle.textContent = item.title;
+    timelineDesc.textContent = current.description;
+  }
+  
+  timelinePrevBtn.addEventListener("click", () => {
+    timelineIndex = (timelineIndex - 1 + timelineImages.length) % timelineImages.length;
+    updateTimeline();
+  });
+  
+  timelineNextBtn.addEventListener("click", () => {
+    timelineIndex = (timelineIndex + 1) % timelineImages.length;
+    updateTimeline();
+  });
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    updateTimeline();
+  });
   
